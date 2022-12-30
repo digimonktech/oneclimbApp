@@ -156,6 +156,10 @@ const SessionsScreen = () => {
         </TouchableOpacity>
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
+        {/* <TouchableOpacity onPress={() => navigation.navigate("HostASession")}>
+          <Text style={styles.addNewText}>Add new Session template</Text>
+        </TouchableOpacity> */}
+
         {selectedTab === 1 ? (
           coachApproved === "approved" ? (
             <>

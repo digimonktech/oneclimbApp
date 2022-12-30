@@ -24,7 +24,7 @@ const ShowProfileScreen = ({ route }) => {
   const locationRef = useRef();
 
   return (
-    <Screen style={{ backgroundColor: colors.white }}>
+    <Screen style={{ backgroundColor: colors.white,marginTop:10 }}>
       <TouchableOpacity
         style={{ marginLeft: 22, marginTop: 20 }}
         onPress={() => navigation.goBack()}
@@ -59,15 +59,15 @@ const ShowProfileScreen = ({ route }) => {
         </View>
       </View>
       <View style={styles.verified}>
-        <View style={styles.section}>
+        {/* <View style={styles.section}>
           <MaterialCommunityIcons
             name='shield-check-outline'
             size={24}
             color={colors.darkGray}
           />
           <AppText style={styles.textIdentity}>Identity verified</AppText>
-        </View>
-        {userData.phoneNumber ? (
+        </View> */}
+        {/* {userData.phoneNumber ? ( */}
           <View style={styles.section}>
             <MaterialCommunityIcons
               name='cellphone'
@@ -76,7 +76,7 @@ const ShowProfileScreen = ({ route }) => {
             />
             <AppText style={styles.textIdentity}>Phone number verified</AppText>
           </View>
-        ) : null}
+        {/* ) : null} */}
       </View>
       <ScrollView>
         <View style={styles.about}>
@@ -207,7 +207,7 @@ const styles = StyleSheet.create({
   },
   verified: {
     marginLeft: 27,
-    marginTop: 10,
+    marginTop: 20,
     marginBottom: 5,
   },
   section: {

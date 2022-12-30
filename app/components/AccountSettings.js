@@ -7,7 +7,7 @@ import { AntDesign, Entypo, MaterialIcons, Feather } from '@expo/vector-icons';
 const AccountSettings = () => {
   return (
     <View style={styles.container}>
-      <AppText style={styles.accSettings}>AccountSettings</AppText>
+      <AppText style={styles.accSettings}>Account settings</AppText>
       <View
         style={[
           styles.section,

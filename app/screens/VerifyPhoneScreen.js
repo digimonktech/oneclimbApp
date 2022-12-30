@@ -141,7 +141,7 @@ const VerifyPhoneScreen = ({ navigation }) => {
             }}
             onChangeFormattedText={(text) => {
               setFormattedValue(text);
-              const checkValid = phoneInput.current?.isValidNumber(value);
+              const checkValid = phoneInput.current?.isValidNumber(text);
               setShowMessage(true);
               setValid(checkValid ? checkValid : false);
             }}

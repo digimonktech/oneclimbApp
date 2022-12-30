@@ -14,7 +14,7 @@ const Referrals = () => {
   return (
     <View style={styles.container}>
       <AppText style={styles.accSettings}>Referrals & Credits</AppText>
-      <View
+      {/* <View
         style={[
           styles.section,
           { borderBottomWidth: 1, borderColor: colors.lightGray },
@@ -29,7 +29,7 @@ const Referrals = () => {
           <AppText style={styles.text}>Refer a Coach</AppText>
         </View>
         <Entypo name='chevron-thin-right' size={17} color={styles.darkGray} />
-      </View>
+      </View> */}
       <View
         style={[
           styles.section,

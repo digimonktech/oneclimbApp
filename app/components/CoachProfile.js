@@ -191,7 +191,7 @@ const CoachProfile = ({ modalRef, item, reportCoachRef }) => {
               />
               <Text style={styles.rating}>Licensed</Text>
             </View>
-            <Text style={styles.title}>Badges</Text>
+            {/* <Text style={styles.title}>Badges</Text>
             <View style={styles.subSection}>
               <MaterialCommunityIcons
                 name='medal-outline'
@@ -280,7 +280,7 @@ const CoachProfile = ({ modalRef, item, reportCoachRef }) => {
                 color={colors.oneClimbOrange}
               />
               <Text style={styles.rating}>International competition</Text>
-            </View>
+            </View> */}
             <Text style={styles.title}>About {item.displayName}</Text>
             <View style={styles.subSection}>
               <SimpleLineIcons

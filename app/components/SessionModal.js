@@ -1,6 +1,7 @@
 import {
   Alert,
   Dimensions,
+  Image,
   Linking,
   StyleSheet,
   Text,
@@ -382,11 +383,11 @@ const SessionModal = ({
         handleStyle={{
           height: 5,
           width: 150,
-          backgroundColor: 'transparent',
+          backgroundColor: "transparent",
           zIndex: 999,
         }}
-        handlePosition={'inside'}
-        overlayStyle={{ backgroundColor: 'rgba(0, 0, 0, 0.25)' }}
+        handlePosition={"inside"}
+        overlayStyle={{ backgroundColor: "rgba(0, 0, 0, 0.25)" }}
         modalStyle={{
           shadowOpacity: 0.25,
           shadowOffset: { width: 0, height: -5 },
@@ -397,7 +398,7 @@ const SessionModal = ({
         HeaderComponent={renderHeader}
         FooterComponent={renderFooter}
         closeSnapPointStraightEnabled={false}
-        keyboardShouldPersistTaps='always'
+        keyboardShouldPersistTaps="always"
         panGestureEnabled={false}
       >
         <View style={styles.containerScroll}>
@@ -419,11 +420,11 @@ const SessionModal = ({
           <View style={styles.section}>
             <Text style={styles.titleSmall}>General Info</Text>
             <Text style={styles.locationName}>
-              This session takes place at{' '}
+              This session takes place at{" "}
               <Text
                 style={[
                   styles.locationName,
-                  { color: colors.darkGray, textDecorationLine: 'underline' },
+                  { color: colors.darkGray, textDecorationLine: "underline" },
                 ]}
               >
                 {item.sessionLocation?.name}
@@ -433,7 +434,7 @@ const SessionModal = ({
               {item.sessionLength} · Hosted in {item.sessionLanguage}
             </Text>
           </View>
-
+          {/* 
           <View style={styles.section}>
             <Text style={styles.titleSmall}>Recommended climbing level</Text>
             <View style={styles.subSection}>
@@ -449,7 +450,7 @@ const SessionModal = ({
                 Climbing levels explained
               </Text>
             </TouchableOpacity>
-          </View>
+          </View> */}
           <View style={styles.section}>
             <Text style={styles.titleSmall}>What you’ll climb</Text>
             <Text style={styles.description}>{item.sessionNotes}</Text>
@@ -458,50 +459,70 @@ const SessionModal = ({
             <Text style={styles.titleSmall}>What do you need to bring</Text>
             {item.equipment?.shoes ? (
               <View style={styles.subSection}>
-                <MaterialCommunityIcons
+                {/* <MaterialCommunityIcons
                   name='medal-outline'
                   size={18}
                   color={colors.oneClimbOrange}
+                /> */}
+                <Image
+                  style={styles.equipmentIcon}
+                  source={require("../assets/shoes.png")}
                 />
                 <Text style={styles.itemText}>Climbing shoes</Text>
               </View>
             ) : null}
             {item.equipment?.chalk ? (
               <View style={styles.subSection}>
-                <MaterialCommunityIcons
-                  name='medal-outline'
+                {/* <MaterialCommunityIcons
+                  name="medal-outline"
                   size={18}
                   color={colors.oneClimbOrange}
+                /> */}
+                <Image
+                  style={styles.equipmentIcon}
+                  source={require("../assets/chalk.png")}
                 />
                 <Text style={styles.itemText}>Chalk bag</Text>
               </View>
             ) : null}
             {item.equipment?.harness ? (
               <View style={styles.subSection}>
-                <MaterialCommunityIcons
-                  name='medal-outline'
+                {/* <MaterialCommunityIcons
+                  name="medal-outline"
                   size={18}
                   color={colors.oneClimbOrange}
+                /> */}
+                <Image
+                  style={styles.equipmentIcon}
+                  source={require("../assets/harness.png")}
                 />
                 <Text style={styles.itemText}>Climbing harness</Text>
               </View>
             ) : null}
             {item.equipment?.rope ? (
               <View style={styles.subSection}>
-                <MaterialCommunityIcons
-                  name='medal-outline'
+                {/* <MaterialCommunityIcons
+                  name="medal-outline"
                   size={18}
                   color={colors.oneClimbOrange}
+                /> */}
+                <Image
+                  style={styles.equipmentIcon}
+                  source={require("../assets/rope.png")}
                 />
                 <Text style={styles.itemText}>Climbing rope</Text>
               </View>
             ) : null}
             {item.equipment?.pad ? (
               <View style={styles.subSection}>
-                <MaterialCommunityIcons
-                  name='medal-outline'
+                {/* <MaterialCommunityIcons
+                  name="medal-outline"
                   size={18}
                   color={colors.oneClimbOrange}
+                /> */}
+                <Image
+                  style={styles.equipmentIcon}
+                  source={require("../assets/pad.png")}
                 />
                 <Text style={styles.itemText}>Crash pad</Text>
               </View>
@@ -509,10 +530,14 @@ const SessionModal = ({
             {item.equipment?.other?.length > 3 ? (
               <View style={styles.subSection}>
                 <MaterialCommunityIcons
-                  name='medal-outline'
+                  name="medal-outline"
                   size={18}
                   color={colors.oneClimbOrange}
                 />
+                {/* <Image
+                  style={styles.equipmentIcon}
+                  source={require("../assets/shoes.png")}
+                /> */}
                 <Text style={styles.itemText}>{item.equipment.other}</Text>
               </View>
             ) : null}
@@ -523,7 +548,7 @@ const SessionModal = ({
             </Text>
             <View style={styles.subSection}>
               <MaterialCommunityIcons
-                name='medal-outline'
+                name="medal-outline"
                 size={18}
                 color={colors.oneClimbOrange}
               />
@@ -531,7 +556,7 @@ const SessionModal = ({
             </View>
             <View style={styles.subSection}>
               <MaterialIcons
-                name='verified-user'
+                name="verified-user"
                 size={18}
                 color={colors.oneClimbOrange}
               />
@@ -539,7 +564,7 @@ const SessionModal = ({
             </View>
             <View style={styles.subSection}>
               <MaterialCommunityIcons
-                name='medal-outline'
+                name="medal-outline"
                 size={18}
                 color={colors.oneClimbOrange}
               />
@@ -553,7 +578,7 @@ const SessionModal = ({
             <Text
               style={[
                 styles.itemText,
-                { fontFamily: 'nunitoBold', fontSize: 16, lineHeight: 18 },
+                { fontFamily: "nunitoBold", fontSize: 16, lineHeight: 18 },
               ]}
             >
               {item.gymTicketIncluded}
@@ -600,7 +625,7 @@ const SessionModal = ({
               <View
                 style={[
                   styles.subSection,
-                  { justifyContent: 'space-between', marginVertical: -5 },
+                  { justifyContent: "space-between", marginVertical: -5 },
                 ]}
               >
                 <Text style={[styles.titleSmall, { color: colors.darkGray }]}>
@@ -622,9 +647,9 @@ const SessionModal = ({
             {scheduled === true ? (
               <TouchableOpacity
                 onPress={() => cancelSession()}
-                disabled={item.status === 'canceled'}
+                disabled={item.status === "canceled"}
               >
-                {item.status === 'canceled' ? (
+                {item.status === "canceled" ? (
                   <Text
                     style={[
                       styles.cancelText,
@@ -655,7 +680,7 @@ const SessionModal = ({
                   }}
                 >
                   <MaterialCommunityIcons
-                    name='email-edit-outline'
+                    name="email-edit-outline"
                     size={24}
                     color={colors.oneClimbOrange}
                   />
@@ -666,13 +691,13 @@ const SessionModal = ({
                   }}
                   onPress={() => {
                     createChat();
-                    navigation.navigate('Chats');
+                    navigation.navigate("Chats");
                     allSessionsRef.current?.close();
                     modalRef.current?.close();
                   }}
                 >
                   <Feather
-                    name='message-square'
+                    name="message-square"
                     size={24}
                     color={colors.oneClimbOrange}
                   />
@@ -688,7 +713,7 @@ const SessionModal = ({
                 reportCoachRef.current?.open();
               }}
             >
-              <Feather name='flag' size={14} color={colors.darkGray} />
+              <Feather name="flag" size={14} color={colors.darkGray} />
               <Text style={styles.textReport}>Report this profile</Text>
             </TouchableOpacity>
           </View>
@@ -722,38 +747,38 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
   },
   avatarBox: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     marginTop: -50,
   },
   containerScroll: {
     marginHorizontal: 25,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: "#FFFFFF",
   },
   title: {
-    fontFamily: 'poppinsSemiBold',
+    fontFamily: "poppinsSemiBold",
     fontSize: 20,
     lineHeight: 30,
     color: colors.darkBlue,
     marginBottom: 34,
   },
   nameContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
   },
   coachName: {
-    fontFamily: 'nunitoBold',
+    fontFamily: "nunitoBold",
     fontSize: 16,
     lineHeight: 22,
     color: colors.darkGray,
-    textDecorationLine: 'underline',
+    textDecorationLine: "underline",
     marginBottom: 18,
   },
   locationName: {
-    fontFamily: 'nunitoBold',
+    fontFamily: "nunitoBold",
     fontSize: 14,
     lineHeight: 22,
-    color: '#787878',
+    color: "#787878",
   },
   section: {
     borderTopColor: colors.lightGray,
@@ -761,7 +786,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   titleSmall: {
-    fontFamily: 'poppinsSemiBold',
+    fontFamily: "poppinsSemiBold",
     fontSize: 16,
     lineHeight: 24,
     color: colors.darkBlue,
@@ -769,51 +794,51 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   subSection: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
   },
   itemText: {
-    fontFamily: 'nunito',
+    fontFamily: "nunito",
     fontSize: 13,
     lineHeight: 14,
-    color: '#787878',
+    color: "#787878",
     marginVertical: 15,
     marginLeft: 14,
   },
   climbingLevelsText: {
-    fontFamily: 'poppinsSemiBold',
+    fontFamily: "poppinsSemiBold",
     fontSize: 14,
     lineHeight: 21,
     color: colors.darkGray,
-    textDecorationLine: 'underline',
+    textDecorationLine: "underline",
   },
   description: {
-    fontFamily: 'nunito',
+    fontFamily: "nunito",
     fontSize: 13,
     lineHeight: 14,
-    color: '#787878',
+    color: "#787878",
     marginVertical: 15,
   },
   report: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     paddingVertical: 20,
   },
   textReport: {
-    fontFamily: 'poppinsSemiBold',
+    fontFamily: "poppinsSemiBold",
     fontSize: 16,
     lineHeight: 24,
     color: colors.darkGray,
-    textDecorationLine: 'underline',
+    textDecorationLine: "underline",
     marginLeft: 7,
   },
   footerConatiner: {
     height: 110,
-    width: '100%',
+    width: "100%",
     backgroundColor: colors.oneClimbBeige,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
     paddingHorizontal: 25,
   },
   button: {
@@ -821,32 +846,37 @@ const styles = StyleSheet.create({
     width: 180,
     borderRadius: 42,
     backgroundColor: colors.oneClimbOrange,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   buttonText: {
-    color: '#FFFFFF',
-    fontFamily: 'poppinsSemiBold',
+    color: "#FFFFFF",
+    fontFamily: "poppinsSemiBold",
     fontSize: 18,
     lineHeight: 27,
   },
   mapContainer: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
     marginVertical: 20,
   },
   map: {
-    width: '100%',
+    width: "100%",
     height: 325,
   },
   cancelText: {
-    fontFamily: 'nunitoBold',
+    fontFamily: "nunitoBold",
     fontSize: 14,
     lineHeight: 22,
     color: colors.darkGray,
-    textDecorationLine: 'underline',
+    textDecorationLine: "underline",
     marginVertical: 10,
+  },
+  equipmentIcon: {
+    width: 20,
+    height: 20,
+    resizeMode: "contain",
   },
 });

@@ -24,13 +24,13 @@ const Coaching = ({ becomeACoachRef }) => {
       >
         <View style={styles.subSection}>
           <MaterialCommunityIcons
-            name='vector-polygon'
+            name="vector-polygon"
             size={24}
             color={colors.darkGray}
           />
           <AppText style={styles.text}>Coach profile presentation</AppText>
         </View>
-        <Entypo name='chevron-thin-right' size={17} color={styles.darkGray} />
+        <Entypo name="chevron-thin-right" size={17} color={styles.darkGray} />
       </View>
       <View
         style={[
@@ -40,49 +40,49 @@ const Coaching = ({ becomeACoachRef }) => {
       >
         <View style={styles.subSection}>
           <MaterialCommunityIcons
-            name='account-group-outline'
+            name="account-group-outline"
             size={24}
             color={colors.darkGray}
           />
 
           <AppText style={styles.text}>Host a session</AppText>
         </View>
-        <TouchableOpacity on>
-          <Entypo name='chevron-thin-right' size={17} color={styles.darkGray} />
+        <TouchableOpacity onPress={() => navigation.navigate("HostASession")}>
+          <Entypo name="chevron-thin-right" size={17} color={styles.darkGray} />
         </TouchableOpacity>
       </View>
       <View style={styles.section}>
         <View style={styles.subSection}>
-          <Feather name='calendar' size={24} color={colors.darkGray} />
+          <Feather name="calendar" size={24} color={colors.darkGray} />
           <AppText style={styles.text}>See all your sessions</AppText>
         </View>
-        <Entypo name='chevron-thin-right' size={17} color={styles.darkGray} />
+        <Entypo name="chevron-thin-right" size={17} color={styles.darkGray} />
       </View>
       <View style={styles.section}>
         <View style={styles.subSection}>
           <MaterialCommunityIcons
-            name='clipboard-text-multiple-outline'
+            name="clipboard-text-multiple-outline"
             size={24}
             color={colors.darkGray}
           />
           <AppText style={styles.text}>Learn about coaching</AppText>
         </View>
-        <Entypo name='chevron-thin-right' size={17} color={styles.darkGray} />
+        <Entypo name="chevron-thin-right" size={17} color={styles.darkGray} />
       </View>
       <View style={styles.section}>
         <View style={styles.subSection}>
           <MaterialCommunityIcons
-            name='card-account-details-star-outline'
+            name="card-account-details-star-outline"
             size={24}
             color={colors.darkGray}
           />
           <AppText style={styles.text}>Become a coach</AppText>
         </View>
         <TouchableOpacity onPress={() => becomeACoachRef.current?.open()}>
-          <Entypo name='chevron-thin-right' size={17} color={styles.darkGray} />
+          <Entypo name="chevron-thin-right" size={17} color={styles.darkGray} />
         </TouchableOpacity>
       </View>
-      <View style={styles.section}>
+      {/* <View style={styles.section}>
         <View style={styles.subSection}>
           <MaterialCommunityIcons
             name='weight-lifter'
@@ -92,7 +92,7 @@ const Coaching = ({ becomeACoachRef }) => {
           <AppText style={styles.text}>I'm a gym owner</AppText>
         </View>
         <Entypo name='chevron-thin-right' size={17} color={styles.darkGray} />
-      </View>
+      </View> */}
     </View>
   );
 };

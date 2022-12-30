@@ -246,11 +246,11 @@ const AboutYou = ({
         handleStyle={{
           height: 5,
           width: 150,
-          backgroundColor: '#DEDEDE',
+          backgroundColor: "#DEDEDE",
           zIndex: 999,
         }}
-        handlePosition={'inside'}
-        overlayStyle={{ backgroundColor: 'rgba(0, 0, 0, 0.25)' }}
+        handlePosition={"inside"}
+        overlayStyle={{ backgroundColor: "rgba(0, 0, 0, 0.25)" }}
         modalStyle={{
           shadowOpacity: 0.25,
           shadowOffset: { width: 0, height: -5 },
@@ -261,7 +261,7 @@ const AboutYou = ({
         }}
         HeaderComponent={renderHeader}
         closeSnapPointStraightEnabled={false}
-        keyboardShouldPersistTaps='always'
+        keyboardShouldPersistTaps="always"
         panGestureEnabled={false}
       >
         <View style={styles.section}>
@@ -274,44 +274,44 @@ const AboutYou = ({
           </Text>
           <TouchableOpacity
             style={styles.radioBox}
-            onPress={() => setHosting('business')}
+            onPress={() => setHosting("business")}
           >
             <Text style={styles.optionText}>
-              As a business{' '}
-              <Text style={[styles.optionText, { fontFamily: 'nunito' }]}>
+              As a business{" "}
+              <Text style={[styles.optionText, { fontFamily: "nunito" }]}>
                 (either sole-proprietor - s.p. or limited liablity - d.o.o.)
               </Text>
             </Text>
             <RadioButton
-              value='business'
-              status={hosting === 'business' ? 'checked' : 'unchecked'}
-              onPress={() => setHosting('business')}
+              value="business"
+              status={hosting === "business" ? "checked" : "unchecked"}
+              onPress={() => setHosting("business")}
               color={colors.oneClimbOrange}
               uncheckedColor={colors.darkGray}
             />
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.radioBox}
-            onPress={() => setHosting('student')}
+            onPress={() => setHosting("student")}
           >
             <Text style={styles.optionText}>As a student</Text>
             <RadioButton
-              value='student'
-              status={hosting === 'student' ? 'checked' : 'unchecked'}
-              onPress={() => setHosting('student')}
+              value="student"
+              status={hosting === "student" ? "checked" : "unchecked"}
+              onPress={() => setHosting("student")}
               color={colors.oneClimbOrange}
               uncheckedColor={colors.darkGray}
             />
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.radioBox}
-            onPress={() => setHosting('private')}
+            onPress={() => setHosting("private")}
           >
             <Text style={styles.optionText}>As a private individual</Text>
             <RadioButton
-              value='private'
-              status={hosting === 'private' ? 'checked' : 'unchecked'}
-              onPress={() => setHosting('private')}
+              value="private"
+              status={hosting === "private" ? "checked" : "unchecked"}
+              onPress={() => setHosting("private")}
               color={colors.oneClimbOrange}
               uncheckedColor={colors.darkGray}
             />
@@ -319,7 +319,7 @@ const AboutYou = ({
         </View>
         <View style={[styles.section, { paddingTop: 0 }]}>
           <Text style={styles.sectionText}>Your personal profile</Text>
-          <Text style={[styles.sectionText, { fontFamily: 'nunito' }]}>
+          <Text style={[styles.sectionText, { fontFamily: "nunito" }]}>
             Use your legal name and provide a photo that clearly shows your face
             (not a logo).
           </Text>
@@ -327,7 +327,7 @@ const AboutYou = ({
             <Avatar
               rounded
               //imageProps={{ onLoadEnd: load }}
-              icon={{ name: 'user', type: 'font-awesome' }}
+              icon={{ name: "user", type: "font-awesome" }}
               //activeOpacity={userID !== user.uid ? 1 : 0.3}
               placeholderStyle={{
                 backgroundColor: colors.hearted2,
@@ -352,7 +352,7 @@ const AboutYou = ({
                   <Text style={styles.editText}>Edit name</Text>
                 </TouchableOpacity>
                 <Entypo
-                  name='dot-single'
+                  name="dot-single"
                   size={24}
                   color={colors.darkGray}
                   style={{ marginHorizontal: 5 }}
@@ -380,8 +380,8 @@ const AboutYou = ({
             rules={registerOptions.description}
             render={({ field: { onChange, onBlur, value } }) => (
               <TextInput
-                name='description'
-                textContentType='none'
+                name="description"
+                textContentType="none"
                 numberOfLines={10}
                 maxLength={800}
                 autoCorrect={false}
@@ -395,8 +395,8 @@ const AboutYou = ({
                 value={value}
               />
             )}
-            name='description'
-            defaultValue={''}
+            name="description"
+            defaultValue={""}
           />
           <Text style={styles.count}>({textLength}/800)</Text>
         </View>
@@ -404,29 +404,29 @@ const AboutYou = ({
           <Text style={styles.sectionText}>
             Which city do you want to primarely host your sessions in?
           </Text>
-          <Text style={[styles.sectionText, { fontFamily: 'nunito' }]}>
+          <Text style={[styles.sectionText, { fontFamily: "nunito" }]}>
             (Note: You can always change this later in Profile or set a
             different location for a specific session that you will create.)
           </Text>
           <GooglePlacesAutocomplete
             ref={googleSearchRef}
-            placeholder='Search Location'
+            placeholder="Search Location"
             textInputProps={{
-              placeholderTextColor: 'rgba(48, 43, 45, 1)',
+              placeholderTextColor: "rgba(48, 43, 45, 1)",
               lineHeight: 20,
             }}
             minLength={2}
             autoFocus={true}
-            returnKeyType={'search'}
+            returnKeyType={"search"}
             fetchDetails={true}
             onPress={handleSearch}
             query={{
               key: GOOGLE_API_KEY,
-              language: 'en',
+              language: "en",
             }}
-            nearbyPlacesAPI='GooglePlacesSearch'
+            nearbyPlacesAPI="GooglePlacesSearch"
             debounce={300}
-            keyboardShouldPersistTaps='always'
+            keyboardShouldPersistTaps="always"
             styles={{
               textInputContainer: {
                 marginVertical: 20,
@@ -456,11 +456,31 @@ const AboutYou = ({
           <Text style={styles.sectionText}>
             Which language(s) will you offer your experience in?
           </Text>
-          <Text style={[styles.sectionText, { fontFamily: 'nunito' }]}>
+          <Text style={[styles.sectionText, { fontFamily: "nunito" }]}>
             (Note: You should be able to read, write, and speak in this
             language. If more than one, separate with comma.)
           </Text>
-          <TextInput
+          <TouchableOpacity
+            style={{
+              marginTop: 15,
+              justifyContent: "space-between",
+              alignItems: "center",
+              flexDirection: "row",
+            }}
+          >
+            <Text
+              style={{
+                fontFamily: "nunitoBold",
+                color: colors.darkGray,
+                fontSize: 16,
+              }}
+            >
+              English
+            </Text>
+            <Entypo name="chevron-right" size={26} color={colors.darkGray} />
+          </TouchableOpacity>
+
+          {/* <TextInput
             name='language'
             textContentType='none'
             autoComplete='off'
@@ -468,9 +488,12 @@ const AboutYou = ({
             style={styles.inputFieldLanguage}
             onChangeText={(text) => setLanguage(text)}
             placeholder={language}
-          />
+          /> */}
         </View>
-        <View style={styles.section}>
+        <View style={{...styles.section,paddingVertical:15}}>
+          <Text style={{...styles.sectionText,textDecorationLine:'underline'}}>Add additional languages</Text>
+        </View>
+        {/* <View style={styles.section}>
           <Text style={styles.sectionText}>
             Please provide us a relevant proof of your valid coaching license.
           </Text>
@@ -662,7 +685,7 @@ const AboutYou = ({
               }
             />
           </View>
-        </View>
+        </View> */}
         <View style={styles.buttonsBox}>
           <TouchableOpacity
             onPress={() => {

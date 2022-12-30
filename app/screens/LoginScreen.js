@@ -200,11 +200,13 @@ function LoginScreen({ navigation }) {
           <AppText style={styles.or}>or</AppText>
           <Divider style={styles.divider} />
         </View>
-        <View style={styles.socialContainer}>
+        {/* <View style={styles.socialContainer}>
           <GoogleSignIn />
           <AppleSignIn />
-        </View>
-        <View style={{ bottom: 33 }}>
+        </View> */}
+        <View
+        // style={{ bottom: 33 }}
+        >
           <View style={styles.signUpContainer}>
             <TouchableOpacity onPress={() => navigation.navigate("Register")}>
               <AppText style={styles.noAccountText}>
