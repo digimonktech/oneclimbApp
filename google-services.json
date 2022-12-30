@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "419187902864",
+    "project_id": "oneclimb",
+    "storage_bucket": "oneclimb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:419187902864:android:99e597f439a479e71e8b15",
+        "android_client_info": {
+          "package_name": "com.oneclimb.oneclimbapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "419187902864-geeu9vnac2ud33um81djjbcv8bnh0jav.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVldHH23AIcKsj69diOOln-10YA-2AONw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "419187902864-geeu9vnac2ud33um81djjbcv8bnh0jav.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "419187902864-l66vp4rnr6crn680rbovd1amqftupvcj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.oneclimb.oneclimbapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

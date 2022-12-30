@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "OneClimb",
+    "slug": "OneClimb",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./app/assets/icon.png",
+    "splash": {
+      "image": "./app/assets/splash3.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.oneclimb.oneclimbapp",
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "config": {
+        "googleSignIn": {
+          "reservedClientId": "com.googleusercontent.apps.419187902864-l66vp4rnr6crn680rbovd1amqftupvcj"
+        }
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./app/assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "googleServicesFile": "./google-services.json",
+      "package": "com.oneclimb.oneclimbapp"
+    },
+    "web": {
+      "favicon": "./app/assets/favicon.png"
+    },
+    "extra": {
+      "IOS_KEY": "419187902864-l66vp4rnr6crn680rbovd1amqftupvcj.apps.googleusercontent.com",
+      "IOS_STANDALONE_KEY": "419187902864-l66vp4rnr6crn680rbovd1amqftupvcj.apps.googleusercontent.com",
+      "ANDROID_KEY": "419187902864-geeu9vnac2ud33um81djjbcv8bnh0jav.apps.googleusercontent.com",
+      "ANDROID_STANDALONE_KEY": "419187902864-geeu9vnac2ud33um81djjbcv8bnh0jav.apps.googleusercontent.com"
+    },
+    "plugins": [["@stripe/stripe-react-native", {}]]
+  }
+}
